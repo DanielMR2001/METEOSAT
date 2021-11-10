@@ -22,18 +22,19 @@ import java.awt.Font;
 @SuppressWarnings("serial")
 public class interfaz extends JFrame {
 
-	private JPanel contentPane;
-	private JTextField txtAlmeria;
-	private JTextField textField;
-	private JTextField textField_1;
-	private JTextField textField_2;
-	private JTextField txtLugo;
-	private JTextField txtHuelva;
-	private JTextField txtLleida;
-	private JTextField txtMallorca;
-	private JTextField txtTeruel;
-	private JTextField txtSalamanca;
-	private JTextField ciudad;
+	public JPanel contentPane;
+	public JTextField txtAlmeria;
+	public JTextField textField;
+	public JTextField textField_1;
+	public JTextField textField_2;
+	public JTextField txtLugo;
+	public JTextField txtHuelva;
+	public JTextField txtLleida;
+	public JTextField txtMallorca;
+	public JTextField txtTeruel;
+	public JTextField txtSalamanca;
+	public JTextField ciudad;
+	public Object comboBox;
 
 	/**
 	 * Launch the application.

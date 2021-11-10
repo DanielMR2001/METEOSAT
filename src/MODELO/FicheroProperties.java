@@ -1,4 +1,4 @@
-package VISTA;
+package MODELO;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.InputStreamReader;
