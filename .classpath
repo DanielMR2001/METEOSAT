@@ -15,5 +15,6 @@
 	<classpathentry kind="lib" path="C:/Users/cuent/OneDrive/Escritorio/Librerias jackson/jackson-databind-2.9.9.jar"/>
 	<classpathentry kind="lib" path="C:/Users/cuent/OneDrive/Escritorio/Librerias jackson/jackson-databind-2.9.9-javadoc.jar"/>
 	<classpathentry kind="lib" path="C:/Users/cuent/OneDrive/Escritorio/Librerias jackson/jackson-databind-2.9.9-sources.jar"/>
+	<classpathentry kind="lib" path="C:/Users/cuent/OneDrive/Escritorio/gson-2.2.2.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

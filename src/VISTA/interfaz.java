@@ -16,6 +16,9 @@ import javax.swing.JComboBox;
 import javax.swing.JTextField;
 import javax.swing.SwingConstants;
 import javax.swing.border.TitledBorder;
+
+import CONTROLADOR.Controlador;
+
 import javax.swing.border.EtchedBorder;
 import java.awt.Font;
 
@@ -40,27 +43,21 @@ public class interfaz extends JFrame {
 	 * Launch the application.
 	 */
 	public static void main(String[] args) {
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				try {
-					interfaz frame = new interfaz();
-					frame.setVisible(true);
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
-		});
-	}
+        interfaz frame = new interfaz();
+        frame.setVisible(true);
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+  
+
+}
 
 	/**
 	 * Create the frame.
 	 */
 	@SuppressWarnings({ "rawtypes", "unchecked" })
 	public interfaz() {
+		setResizable(false);
 		
 		this.setTitle("   - METEO -");
-		
-		setResizable(false);
 
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 1128, 625);
