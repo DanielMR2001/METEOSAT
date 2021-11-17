@@ -2,6 +2,8 @@ package CONTROLADOR;
 import java.awt.Color;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.IOException;
+
 import javax.swing.ImageIcon;
 import MODELO.FicheroProperties;
 import VISTA.interfazMapa;
@@ -12,11 +14,13 @@ public class Controlador implements ActionListener{
 	public Controlador(VISTA.interfazMapa frame) {
 		this.in=frame;
 		this.in.comboBox.addActionListener(this);
+		this.in.diasMapa.addActionListener(this);
 	}	
 	@SuppressWarnings("static-access")
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		String ciudad = (String) in.comboBox.getSelectedItem();
+		String dia = (String) in.diasMapa.getSelectedItem();
 		try {
 		if (ciudad.equals("Almeria")) {		
 			FicheroProperties conexionAlmeria = new FicheroProperties();	
@@ -239,6 +243,9 @@ public class Controlador implements ActionListener{
 				if(conexionTeruel.gettiempoDia().get(0).getWeather().equals("Chubascos dispersos")) {in.dibujoTeruel.setIcon(new ImageIcon("chubascos.png"));}
 				conexionTeruel.gettiempoDia().clear();
 		     }
+		if(dia.equals("HOY")) {diasMapa(0);}
+		if(dia.equals("MAÑANA")) {diasMapa(1);}
+		if(dia.equals("SIGUIENTE")) {diasMapa(2);}
 		} catch (Exception Mapa) {Mapa.printStackTrace();}	
 	}
 	@SuppressWarnings("static-access")
@@ -284,5 +291,98 @@ public class Controlador implements ActionListener{
 		if(ciudad.gettiempoDia().get(4).getWeather().equals("Lluvia débil")) {in.dibujo_4.setIcon(new ImageIcon("debil.png"));}
 		if(ciudad.gettiempoDia().get(4).getWeather().equals("Chubascos dispersos")) {in.dibujo_4.setIcon(new ImageIcon("chubascos.png"));}
 	}
+	@SuppressWarnings("static-access")
+	public void diasMapa(int dia) throws IOException {
+		FicheroProperties conexionMapaAlmeria = new FicheroProperties();	
+		FicheroProperties conexionMapaBurgos = new FicheroProperties();	
+		FicheroProperties conexionMapaCanarias = new FicheroProperties();	
+		FicheroProperties conexionMapaCiudadReal = new FicheroProperties();	
+		FicheroProperties conexionMapaHuelva = new FicheroProperties();	
+		FicheroProperties conexionMapaLleida = new FicheroProperties();	
+		FicheroProperties conexionMapaLugo = new FicheroProperties();	
+		FicheroProperties conexionMapaSalamanca = new FicheroProperties();	
+		FicheroProperties conexionMapaTeruel = new FicheroProperties();	
+		FicheroProperties conexionMapaMallorca = new FicheroProperties();	
+		conexionMapaAlmeria.properties("Almeria");
+		if(conexionMapaAlmeria.gettiempoDia().get(dia).getWeather().equals("Soleado")) {in.dibujo_Almeria.setIcon(new ImageIcon("sol.png"));}
+		if(conexionMapaAlmeria.gettiempoDia().get(dia).getWeather().equals("Parcialmente nuboso")) {in.dibujo_Almeria.setIcon(new ImageIcon("parciamente.png"));}
+		if(conexionMapaAlmeria.gettiempoDia().get(dia).getWeather().equals("Lluvia")) {in.dibujo_Almeria.setIcon(new ImageIcon("tormenta.ong.png"));}
+		if(conexionMapaAlmeria.gettiempoDia().get(dia).getWeather().equals("Muy nuboso") || conexionMapaAlmeria.gettiempoDia().get(dia).getWeather().equals("Cubierto")) {in.dibujo_Almeria.setIcon(new ImageIcon("muynuboso.png"));}
+		if(conexionMapaAlmeria.gettiempoDia().get(dia).getWeather().equals("Lluvia débil")) {in.dibujo_Almeria.setIcon(new ImageIcon("debil.png"));}
+		if(conexionMapaAlmeria.gettiempoDia().get(dia).getWeather().equals("Chubascos dispersos")) {in.dibujo_Almeria.setIcon(new ImageIcon("chubascos.png"));}
+		conexionMapaAlmeria.gettiempoDia().clear();			
+		conexionMapaBurgos.properties("Burgos");
+		if(conexionMapaBurgos.gettiempoDia().get(dia).getWeather().equals("Soleado")) {in.dibujo_Burgos.setIcon(new ImageIcon("sol.png"));}
+		if(conexionMapaBurgos.gettiempoDia().get(dia).getWeather().equals("Parcialmente nuboso")) {in.dibujo_Burgos.setIcon(new ImageIcon("parciamente.png"));}
+		if(conexionMapaBurgos.gettiempoDia().get(dia).getWeather().equals("Lluvia")) {in.dibujo_Burgos.setIcon(new ImageIcon("tormenta.ong.png"));}
+		if(conexionMapaBurgos.gettiempoDia().get(dia).getWeather().equals("Muy nuboso")||conexionMapaBurgos.gettiempoDia().get(dia).getWeather().equals("Cubierto")) {in.dibujo_Burgos.setIcon(new ImageIcon("muynuboso.png"));}
+		if(conexionMapaBurgos.gettiempoDia().get(dia).getWeather().equals("Lluvia débil")) {in.dibujo_Burgos.setIcon(new ImageIcon("debil.png"));}
+		if(conexionMapaBurgos.gettiempoDia().get(dia).getWeather().equals("Chubascos dispersos")) {in.dibujo_Burgos.setIcon(new ImageIcon("chubascos.png"));}	
+		conexionMapaBurgos.gettiempoDia().clear();		
+		conexionMapaCanarias.properties("Canarias");
+		if(conexionMapaCanarias.gettiempoDia().get(dia).getWeather().equals("Soleado")) {in.dibujo_Canarias.setIcon(new ImageIcon("sol.png"));}
+		if(conexionMapaCanarias.gettiempoDia().get(dia).getWeather().equals("Parcialmente nuboso")) {in.dibujo_Canarias.setIcon(new ImageIcon("parciamente.png"));}
+		if(conexionMapaCanarias.gettiempoDia().get(dia).getWeather().equals("Lluvia")) {in.dibujo_Canarias.setIcon(new ImageIcon("tormenta.ong.png"));}
+		if(conexionMapaCanarias.gettiempoDia().get(dia).getWeather().equals("Muy nuboso") || conexionMapaCanarias.gettiempoDia().get(dia).getWeather().equals("Cubierto")) {in.dibujo_Canarias.setIcon(new ImageIcon("muynuboso.png"));}
+		if(conexionMapaCanarias.gettiempoDia().get(dia).getWeather().equals("Lluvia débil")) {in.dibujo_Canarias.setIcon(new ImageIcon("debil.png"));}
+		if(conexionMapaCanarias.gettiempoDia().get(dia).getWeather().equals("Chubascos dispersos")) {in.dibujo_Canarias.setIcon(new ImageIcon("chubascos.png"));}
+		conexionMapaCanarias.gettiempoDia().clear();		
+		conexionMapaCiudadReal.properties("CiudadReal");
+		if(conexionMapaCiudadReal.gettiempoDia().get(dia).getWeather().equals("Soleado")) {in.dibujo_CiudadReal.setIcon(new ImageIcon("sol.png"));}
+		if(conexionMapaCiudadReal.gettiempoDia().get(dia).getWeather().equals("Parcialmente nuboso")) {in.dibujo_CiudadReal.setIcon(new ImageIcon("parciamente.png"));}
+		if(conexionMapaCiudadReal.gettiempoDia().get(dia).getWeather().equals("Lluvia")) {in.dibujo_CiudadReal.setIcon(new ImageIcon("tormenta.ong.png"));}
+		if(conexionMapaCiudadReal.gettiempoDia().get(dia).getWeather().equals("Muy nuboso") || conexionMapaCiudadReal.gettiempoDia().get(dia).getWeather().equals("Cubierto")) {in.dibujo_CiudadReal.setIcon(new ImageIcon("muynuboso.png"));}
+		if(conexionMapaCiudadReal.gettiempoDia().get(dia).getWeather().equals("Lluvia débil")) {in.dibujo_CiudadReal.setIcon(new ImageIcon("debil.png"));}
+		if(conexionMapaCiudadReal.gettiempoDia().get(dia).getWeather().equals("Chubascos dispersos")) {in.dibujo_CiudadReal.setIcon(new ImageIcon("chubascos.png"));}
+		conexionMapaCiudadReal.gettiempoDia().clear();		
+		conexionMapaHuelva.properties("Huelva");
+		if(conexionMapaHuelva.gettiempoDia().get(dia).getWeather().equals("Soleado")) {in.dibujo_Huelva.setIcon(new ImageIcon("sol.png"));}
+		if(conexionMapaHuelva.gettiempoDia().get(dia).getWeather().equals("Parcialmente nuboso")) {in.dibujo_Huelva.setIcon(new ImageIcon("parciamente.png"));}
+		if(conexionMapaHuelva.gettiempoDia().get(dia).getWeather().equals("Lluvia")) {in.dibujo_Huelva.setIcon(new ImageIcon("tormenta.ong.png"));}
+		if(conexionMapaHuelva.gettiempoDia().get(dia).getWeather().equals("Muy nuboso") || conexionMapaHuelva.gettiempoDia().get(dia).getWeather().equals("Cubierto")) {in.dibujo_Huelva.setIcon(new ImageIcon("muynuboso.png"));}
+		if(conexionMapaHuelva.gettiempoDia().get(dia).getWeather().equals("Lluvia débil")) {in.dibujo_Huelva.setIcon(new ImageIcon("debil.png"));}
+		if(conexionMapaHuelva.gettiempoDia().get(dia).getWeather().equals("Chubascos dispersos")) {in.dibujo_Huelva.setIcon(new ImageIcon("chubascos.png"));}
+		conexionMapaHuelva.gettiempoDia().clear();						
+		conexionMapaLleida.properties("Lleida");
+		if(conexionMapaLleida.gettiempoDia().get(dia).getWeather().equals("Soleado")) {in.dibujo_Lleida.setIcon(new ImageIcon("sol.png"));}
+		if(conexionMapaLleida.gettiempoDia().get(dia).getWeather().equals("Parcialmente nuboso")) {in.dibujo_Lleida.setIcon(new ImageIcon("parciamente.png"));}
+		if(conexionMapaLleida.gettiempoDia().get(dia).getWeather().equals("Lluvia")) {in.dibujo_Lleida.setIcon(new ImageIcon("tormenta.ong.png"));}
+		if(conexionMapaLleida.gettiempoDia().get(dia).getWeather().equals("Muy nuboso") || conexionMapaLleida.gettiempoDia().get(dia).getWeather().equals("Cubierto")) {in.dibujo_Lleida.setIcon(new ImageIcon("muynuboso.png"));}
+		if(conexionMapaLleida.gettiempoDia().get(dia).getWeather().equals("Lluvia débil")) {in.dibujo_Lleida.setIcon(new ImageIcon("debil.png"));}
+		if(conexionMapaLleida.gettiempoDia().get(dia).getWeather().equals("Chubascos dispersos")) {in.dibujo_Lleida.setIcon(new ImageIcon("chubascos.png"));}
+		conexionMapaLleida.gettiempoDia().clear();		
+		conexionMapaLugo.properties("Lugo");
+		if(conexionMapaLugo.gettiempoDia().get(dia).getWeather().equals("Soleado")) {in.dibujo_Lugo.setIcon(new ImageIcon("sol.png"));}
+		if(conexionMapaLugo.gettiempoDia().get(dia).getWeather().equals("Parcialmente nuboso")) {in.dibujo_Lugo.setIcon(new ImageIcon("parciamente.png"));}
+		if(conexionMapaLugo.gettiempoDia().get(dia).getWeather().equals("Lluvia")) {in.dibujo_Lugo.setIcon(new ImageIcon("tormenta.ong.png"));}
+		if(conexionMapaLugo.gettiempoDia().get(dia).getWeather().equals("Muy nuboso") || conexionMapaLugo.gettiempoDia().get(dia).getWeather().equals("Cubierto")) {in.dibujo_Lugo.setIcon(new ImageIcon("muynuboso.png"));}
+		if(conexionMapaLugo.gettiempoDia().get(dia).getWeather().equals("Lluvia débil")) {in.dibujo_Lugo.setIcon(new ImageIcon("debil.png"));}
+		if(conexionMapaLugo.gettiempoDia().get(dia).getWeather().equals("Chubascos dispersos")) {in.dibujo_Lugo.setIcon(new ImageIcon("chubascos.png"));}
+		conexionMapaLugo.gettiempoDia().clear();		
+		conexionMapaSalamanca.properties("Salamanca");
+		if(conexionMapaSalamanca.gettiempoDia().get(dia).getWeather().equals("Soleado")) {in.dibujo_Salamanca.setIcon(new ImageIcon("sol.png"));}
+		if(conexionMapaSalamanca.gettiempoDia().get(dia).getWeather().equals("Parcialmente nuboso")) {in.dibujo_Salamanca.setIcon(new ImageIcon("parciamente.png"));}
+		if(conexionMapaSalamanca.gettiempoDia().get(dia).getWeather().equals("Lluvia")) {in.dibujo_Salamanca.setIcon(new ImageIcon("tormenta.ong.png"));}
+		if(conexionMapaSalamanca.gettiempoDia().get(dia).getWeather().equals("Muy nuboso") || conexionMapaSalamanca.gettiempoDia().get(dia).getWeather().equals("Cubierto")) {in.dibujo_Salamanca.setIcon(new ImageIcon("muynuboso.png"));}
+		if(conexionMapaSalamanca.gettiempoDia().get(dia).getWeather().equals("Lluvia débil")) {in.dibujo_Salamanca.setIcon(new ImageIcon("debil.png"));}
+		if(conexionMapaSalamanca.gettiempoDia().get(dia).getWeather().equals("Chubascos dispersos")) {in.dibujo_Salamanca.setIcon(new ImageIcon("chubascos.png"));}
+		conexionMapaSalamanca.gettiempoDia().clear();		
+		conexionMapaTeruel.properties("Teruel");
+		if(conexionMapaTeruel.gettiempoDia().get(dia).getWeather().equals("Soleado")) {in.dibujoTeruel.setIcon(new ImageIcon("sol.png"));}
+		if(conexionMapaTeruel.gettiempoDia().get(dia).getWeather().equals("Parcialmente nuboso")) {in.dibujoTeruel.setIcon(new ImageIcon("parciamente.png"));}
+		if(conexionMapaTeruel.gettiempoDia().get(dia).getWeather().equals("Lluvia")) {in.dibujoTeruel.setIcon(new ImageIcon("tormenta.ong.png"));}
+		if(conexionMapaTeruel.gettiempoDia().get(dia).getWeather().equals("Muy nuboso") || conexionMapaTeruel.gettiempoDia().get(dia).getWeather().equals("Cubierto")) {in.dibujoTeruel.setIcon(new ImageIcon("muynuboso.png"));}
+		if(conexionMapaTeruel.gettiempoDia().get(dia).getWeather().equals("Lluvia débil")) {in.dibujoTeruel.setIcon(new ImageIcon("debil.png"));}
+		if(conexionMapaTeruel.gettiempoDia().get(dia).getWeather().equals("Chubascos dispersos")) {in.dibujoTeruel.setIcon(new ImageIcon("chubascos.png"));}
+		conexionMapaTeruel.gettiempoDia().clear();
+		conexionMapaMallorca.properties("Mallorca");
+		if(conexionMapaMallorca.gettiempoDia().get(dia).getWeather().equals("Soleado")) {in.dibujo_Mallorca.setIcon(new ImageIcon("sol.png"));}
+		if(conexionMapaMallorca.gettiempoDia().get(dia).getWeather().equals("Parcialmente nuboso")) {in.dibujo_Mallorca.setIcon(new ImageIcon("parciamente.png"));}
+		if(conexionMapaMallorca.gettiempoDia().get(dia).getWeather().equals("Lluvia")) {in.dibujo_Mallorca.setIcon(new ImageIcon("tormenta.ong.png"));}
+		if(conexionMapaMallorca.gettiempoDia().get(dia).getWeather().equals("Muy nuboso") || conexionMapaMallorca.gettiempoDia().get(dia).getWeather().equals("Cubierto")) {in.dibujo_Mallorca.setIcon(new ImageIcon("muynuboso.png"));}
+		if(conexionMapaMallorca.gettiempoDia().get(dia).getWeather().equals("Lluvia débil")) {in.dibujo_Mallorca.setIcon(new ImageIcon("debil.png"));}
+		if(conexionMapaMallorca.gettiempoDia().get(dia).getWeather().equals("Chubascos dispersos")) {in.dibujo_Mallorca.setIcon(new ImageIcon("chubascos.png"));}
+		conexionMapaMallorca.gettiempoDia().clear();
+	  }
 }
 

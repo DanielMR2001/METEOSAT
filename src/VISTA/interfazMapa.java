@@ -74,7 +74,7 @@ public class interfazMapa extends JFrame {
 	public JLabel dibujo_Huelva;
 	public JLabel dibujo_Almeria;
 	public JLabel dibujo_Lugo;	
-	public JLabel fechaActual;
+	public JComboBox diasMapa;
 	/**
 	 * Launch the application.
 	 */
@@ -430,8 +430,8 @@ public class interfazMapa extends JFrame {
 		
 		comboBox = new JComboBox();
 		lblNewLabel.add(comboBox);
-		comboBox.setMaximumRowCount(10);
-		comboBox.setModel(new DefaultComboBoxModel(new String[] {"Almeria","Burgos","Canarias","Ciudad Real","Huelva","Lleida","Lugo","Mallorca","Salamanca","Teruel"}));
+		comboBox.setMaximumRowCount(11);
+		comboBox.setModel(new DefaultComboBoxModel(new String[] {"", "Almeria", "Burgos", "Canarias", "Ciudad Real", "Huelva", "Lleida", "Lugo", "Mallorca", "Salamanca", "Teruel"}));
 		comboBox.setBounds(714, 353, 99, 22);
 		
 		dibujo_Canarias = new JLabel("");
@@ -474,11 +474,11 @@ public class interfazMapa extends JFrame {
 		dibujo_Lugo.setBounds(210, 10, 55, 49);
 		lblNewLabel.add(dibujo_Lugo);
 		
-		fechaActual = new JLabel("");
-		fechaActual.setFont(new Font("Tw Cen MT Condensed Extra Bold", Font.BOLD, 21));
-		fechaActual.setBackground(Color.CYAN);
-		fechaActual.setBounds(10, 10, 103, 41);
-		lblNewLabel.add(fechaActual);
+		diasMapa = new JComboBox();
+		lblNewLabel.add(diasMapa);
+		diasMapa.setModel(new DefaultComboBoxModel(new String[] {"", "HOY", "MA\u00D1ANA", "SIGUIENTE"}));
+		diasMapa.setMaximumRowCount(10);
+		diasMapa.setBounds(10, 10, 99, 22);
 		
 	}
 }
