@@ -43,6 +43,7 @@ public class Controlador implements ActionListener{
 				if(conexionAlmeria.gettiempoDia().get(0).getWeather().equals("Muy nuboso") || conexionAlmeria.gettiempoDia().get(0).getWeather().equals("Cubierto")) {in.dibujo_Almeria.setIcon(new ImageIcon("muynuboso.png"));}
 				if(conexionAlmeria.gettiempoDia().get(0).getWeather().equals("Lluvia débil")) {in.dibujo_Almeria.setIcon(new ImageIcon("debil.png"));}
 				if(conexionAlmeria.gettiempoDia().get(0).getWeather().equals("Chubascos dispersos")) {in.dibujo_Almeria.setIcon(new ImageIcon("chubascos.png"));}
+				in.dibujo_Burgos.setIcon(null);in.dibujo_CiudadReal.setIcon(null);in.dibujo_Canarias.setIcon(null);in.dibujo_Lugo.setIcon(null);in.dibujo_Lleida.setIcon(null);in.dibujo_Salamanca.setIcon(null);in.dibujo_Mallorca.setIcon(null);in.dibujoTeruel.setIcon(null);in.dibujo_Huelva.setIcon(null);
 				conexionAlmeria.gettiempoDia().clear();
 		} else if (ciudad.equals("Burgos")) {
 			FicheroProperties conexionBurgos = new FicheroProperties();
@@ -65,6 +66,7 @@ public class Controlador implements ActionListener{
 				if(conexionBurgos.gettiempoDia().get(0).getWeather().equals("Muy nuboso")||conexionBurgos.gettiempoDia().get(0).getWeather().equals("Cubierto")) {in.dibujo_Burgos.setIcon(new ImageIcon("muynuboso.png"));}
 				if(conexionBurgos.gettiempoDia().get(0).getWeather().equals("Lluvia débil")) {in.dibujo_Burgos.setIcon(new ImageIcon("debil.png"));}
 				if(conexionBurgos.gettiempoDia().get(0).getWeather().equals("Chubascos dispersos")) {in.dibujo_Burgos.setIcon(new ImageIcon("chubascos.png"));}	
+				in.dibujo_Almeria.setIcon(null);in.dibujo_CiudadReal.setIcon(null);in.dibujo_Canarias.setIcon(null);in.dibujo_Lugo.setIcon(null);in.dibujo_Lleida.setIcon(null);in.dibujo_Salamanca.setIcon(null);in.dibujo_Mallorca.setIcon(null);in.dibujoTeruel.setIcon(null);in.dibujo_Huelva.setIcon(null);
 				conexionBurgos.gettiempoDia().clear();
 		} else if (ciudad.equals("Canarias")) {
 			FicheroProperties conexionCanarias = new FicheroProperties();
@@ -87,6 +89,7 @@ public class Controlador implements ActionListener{
 				if(conexionCanarias.gettiempoDia().get(0).getWeather().equals("Muy nuboso") || conexionCanarias.gettiempoDia().get(0).getWeather().equals("Cubierto")) {in.dibujo_Canarias.setIcon(new ImageIcon("muynuboso.png"));}
 				if(conexionCanarias.gettiempoDia().get(0).getWeather().equals("Lluvia débil")) {in.dibujo_Canarias.setIcon(new ImageIcon("debil.png"));}
 				if(conexionCanarias.gettiempoDia().get(0).getWeather().equals("Chubascos dispersos")) {in.dibujo_Canarias.setIcon(new ImageIcon("chubascos.png"));}
+				in.dibujo_Burgos.setIcon(null);in.dibujo_CiudadReal.setIcon(null);in.dibujo_Almeria.setIcon(null);in.dibujo_Lugo.setIcon(null);in.dibujo_Lleida.setIcon(null);in.dibujo_Salamanca.setIcon(null);in.dibujo_Mallorca.setIcon(null);in.dibujoTeruel.setIcon(null);in.dibujo_Huelva.setIcon(null);
 				conexionCanarias.gettiempoDia().clear();
 		} else if (ciudad.equals("Ciudad Real")) {
 			FicheroProperties conexionCiudadReal = new FicheroProperties();
@@ -109,6 +112,7 @@ public class Controlador implements ActionListener{
 				if(conexionCiudadReal.gettiempoDia().get(0).getWeather().equals("Muy nuboso") || conexionCiudadReal.gettiempoDia().get(0).getWeather().equals("Cubierto")) {in.dibujo_CiudadReal.setIcon(new ImageIcon("muynuboso.png"));}
 				if(conexionCiudadReal.gettiempoDia().get(0).getWeather().equals("Lluvia débil")) {in.dibujo_CiudadReal.setIcon(new ImageIcon("debil.png"));}
 				if(conexionCiudadReal.gettiempoDia().get(0).getWeather().equals("Chubascos dispersos")) {in.dibujo_CiudadReal.setIcon(new ImageIcon("chubascos.png"));}
+				in.dibujo_Burgos.setIcon(null);in.dibujo_Almeria.setIcon(null);in.dibujo_Canarias.setIcon(null);in.dibujo_Lugo.setIcon(null);in.dibujo_Lleida.setIcon(null);in.dibujo_Salamanca.setIcon(null);in.dibujo_Mallorca.setIcon(null);in.dibujoTeruel.setIcon(null);in.dibujo_Huelva.setIcon(null);
 				conexionCiudadReal.gettiempoDia().clear();
 		} else if (ciudad.equals("Huelva")) {
 			FicheroProperties conexionHuelva = new FicheroProperties();
@@ -131,6 +135,7 @@ public class Controlador implements ActionListener{
 				if(conexionHuelva.gettiempoDia().get(0).getWeather().equals("Muy nuboso") || conexionHuelva.gettiempoDia().get(0).getWeather().equals("Cubierto")) {in.dibujo_Huelva.setIcon(new ImageIcon("muynuboso.png"));}
 				if(conexionHuelva.gettiempoDia().get(0).getWeather().equals("Lluvia débil")) {in.dibujo_Huelva.setIcon(new ImageIcon("debil.png"));}
 				if(conexionHuelva.gettiempoDia().get(0).getWeather().equals("Chubascos dispersos")) {in.dibujo_Huelva.setIcon(new ImageIcon("chubascos.png"));}
+				in.dibujo_Burgos.setIcon(null);in.dibujo_CiudadReal.setIcon(null);in.dibujo_Canarias.setIcon(null);in.dibujo_Lugo.setIcon(null);in.dibujo_Lleida.setIcon(null);in.dibujo_Salamanca.setIcon(null);in.dibujo_Mallorca.setIcon(null);in.dibujoTeruel.setIcon(null);in.dibujo_Almeria.setIcon(null);
 				conexionHuelva.gettiempoDia().clear();
 		} else if (ciudad.equals("Lleida")) {
 			FicheroProperties conexionLleida = new FicheroProperties();
@@ -153,6 +158,7 @@ public class Controlador implements ActionListener{
 				if(conexionLleida.gettiempoDia().get(0).getWeather().equals("Muy nuboso") || conexionLleida.gettiempoDia().get(0).getWeather().equals("Cubierto")) {in.dibujo_Lleida.setIcon(new ImageIcon("muynuboso.png"));}
 				if(conexionLleida.gettiempoDia().get(0).getWeather().equals("Lluvia débil")) {in.dibujo_Lleida.setIcon(new ImageIcon("debil.png"));}
 				if(conexionLleida.gettiempoDia().get(0).getWeather().equals("Chubascos dispersos")) {in.dibujo_Lleida.setIcon(new ImageIcon("chubascos.png"));}
+				in.dibujo_Burgos.setIcon(null);in.dibujo_CiudadReal.setIcon(null);in.dibujo_Canarias.setIcon(null);in.dibujo_Lugo.setIcon(null);in.dibujo_Almeria.setIcon(null);in.dibujo_Salamanca.setIcon(null);in.dibujo_Mallorca.setIcon(null);in.dibujoTeruel.setIcon(null);in.dibujo_Huelva.setIcon(null);
 				conexionLleida.gettiempoDia().clear();
 		} else if (ciudad.equals("Lugo")) {
 			FicheroProperties conexionLugo = new FicheroProperties();
@@ -175,6 +181,7 @@ public class Controlador implements ActionListener{
 				if(conexionLugo.gettiempoDia().get(0).getWeather().equals("Muy nuboso") || conexionLugo.gettiempoDia().get(0).getWeather().equals("Cubierto")) {in.dibujo_Lugo.setIcon(new ImageIcon("muynuboso.png"));}
 				if(conexionLugo.gettiempoDia().get(0).getWeather().equals("Lluvia débil")) {in.dibujo_Lugo.setIcon(new ImageIcon("debil.png"));}
 				if(conexionLugo.gettiempoDia().get(0).getWeather().equals("Chubascos dispersos")) {in.dibujo_Lugo.setIcon(new ImageIcon("chubascos.png"));}
+				in.dibujo_Burgos.setIcon(null);in.dibujo_CiudadReal.setIcon(null);in.dibujo_Canarias.setIcon(null);in.dibujo_Almeria.setIcon(null);in.dibujo_Lleida.setIcon(null);in.dibujo_Salamanca.setIcon(null);in.dibujo_Mallorca.setIcon(null);in.dibujoTeruel.setIcon(null);in.dibujo_Huelva.setIcon(null);
 				conexionLugo.gettiempoDia().clear();
 		} else if (ciudad.equals("Mallorca")) {
 			FicheroProperties conexionMallorca = new FicheroProperties();
@@ -197,6 +204,7 @@ public class Controlador implements ActionListener{
 				if(conexionMallorca.gettiempoDia().get(0).getWeather().equals("Muy nuboso") || conexionMallorca.gettiempoDia().get(0).getWeather().equals("Cubierto")) {in.dibujo_Mallorca.setIcon(new ImageIcon("muynuboso.png"));}
 				if(conexionMallorca.gettiempoDia().get(0).getWeather().equals("Lluvia débil")) {in.dibujo_Mallorca.setIcon(new ImageIcon("debil.png"));}
 				if(conexionMallorca.gettiempoDia().get(0).getWeather().equals("Chubascos dispersos")) {in.dibujo_Mallorca.setIcon(new ImageIcon("chubascos.png"));}
+				in.dibujo_Burgos.setIcon(null);in.dibujo_CiudadReal.setIcon(null);in.dibujo_Canarias.setIcon(null);in.dibujo_Lugo.setIcon(null);in.dibujo_Lleida.setIcon(null);in.dibujo_Salamanca.setIcon(null);in.dibujo_Almeria.setIcon(null);in.dibujoTeruel.setIcon(null);in.dibujo_Huelva.setIcon(null);
 				conexionMallorca.gettiempoDia().clear();
 		} else if (ciudad.equals("Salamanca")) {
 			FicheroProperties conexionSalamanca = new FicheroProperties();
@@ -219,6 +227,7 @@ public class Controlador implements ActionListener{
 				if(conexionSalamanca.gettiempoDia().get(0).getWeather().equals("Muy nuboso") || conexionSalamanca.gettiempoDia().get(0).getWeather().equals("Cubierto")) {in.dibujo_Salamanca.setIcon(new ImageIcon("muynuboso.png"));}
 				if(conexionSalamanca.gettiempoDia().get(0).getWeather().equals("Lluvia débil")) {in.dibujo_Salamanca.setIcon(new ImageIcon("debil.png"));}
 				if(conexionSalamanca.gettiempoDia().get(0).getWeather().equals("Chubascos dispersos")) {in.dibujo_Salamanca.setIcon(new ImageIcon("chubascos.png"));}
+				in.dibujo_Burgos.setIcon(null);in.dibujo_CiudadReal.setIcon(null);in.dibujo_Canarias.setIcon(null);in.dibujo_Lugo.setIcon(null);in.dibujo_Lleida.setIcon(null);in.dibujo_Almeria.setIcon(null);in.dibujo_Mallorca.setIcon(null);in.dibujoTeruel.setIcon(null);in.dibujo_Huelva.setIcon(null);
 				conexionSalamanca.gettiempoDia().clear();
 		} else if (ciudad.equals("Teruel")) {
 			FicheroProperties conexionTeruel = new FicheroProperties();
@@ -241,6 +250,7 @@ public class Controlador implements ActionListener{
 				if(conexionTeruel.gettiempoDia().get(0).getWeather().equals("Muy nuboso") || conexionTeruel.gettiempoDia().get(0).getWeather().equals("Cubierto")) {in.dibujoTeruel.setIcon(new ImageIcon("muynuboso.png"));}
 				if(conexionTeruel.gettiempoDia().get(0).getWeather().equals("Lluvia débil")) {in.dibujoTeruel.setIcon(new ImageIcon("debil.png"));}
 				if(conexionTeruel.gettiempoDia().get(0).getWeather().equals("Chubascos dispersos")) {in.dibujoTeruel.setIcon(new ImageIcon("chubascos.png"));}
+				in.dibujo_Burgos.setIcon(null);in.dibujo_CiudadReal.setIcon(null);in.dibujo_Canarias.setIcon(null);in.dibujo_Lugo.setIcon(null);in.dibujo_Lleida.setIcon(null);in.dibujo_Salamanca.setIcon(null);in.dibujo_Mallorca.setIcon(null);in.dibujo_Almeria.setIcon(null);in.dibujo_Huelva.setIcon(null);
 				conexionTeruel.gettiempoDia().clear();
 		     }
 		if(dia.equals("HOY")) {diasMapa(0);}
@@ -385,4 +395,3 @@ public class Controlador implements ActionListener{
 		conexionMapaMallorca.gettiempoDia().clear();
 	  }
 }
-
