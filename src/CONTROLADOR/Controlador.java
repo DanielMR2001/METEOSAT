@@ -257,20 +257,22 @@ public class Controlador implements ActionListener{
 	public void iconos(FicheroProperties conexion, String ciudad, JLabel conexionCiudad, int dia) throws IOException {
 		conexion.properties(ciudad);
 		if(conexion.gettiempoDia().get(dia).getWeather().equals("Soleado")) {conexionCiudad.setIcon(new ImageIcon("sol.png"));}
-		if(conexion.gettiempoDia().get(dia).getWeather().equals("Parcialmente nuboso")) {conexionCiudad.setIcon(new ImageIcon("parciamente.png"));}
+		if(conexion.gettiempoDia().get(dia).getWeather().equals("Parcialmente nuboso")||conexion.gettiempoDia().get(dia).getWeather().equals("Intervalos de sol")) {conexionCiudad.setIcon(new ImageIcon("parciamente.png"));}
 		if(conexion.gettiempoDia().get(dia).getWeather().equals("Lluvia")) {conexionCiudad.setIcon(new ImageIcon("tormenta.ong.png"));}
 		if(conexion.gettiempoDia().get(dia).getWeather().equals("Muy nuboso") || conexion.gettiempoDia().get(dia).getWeather().equals("Cubierto")) {conexionCiudad.setIcon(new ImageIcon("muynuboso.png"));}
 		if(conexion.gettiempoDia().get(dia).getWeather().equals("Lluvia débil")) {conexionCiudad.setIcon(new ImageIcon("debil.png"));}
 		if(conexion.gettiempoDia().get(dia).getWeather().equals("Chubascos dispersos")) {conexionCiudad.setIcon(new ImageIcon("chubascos.png"));}
+		if(conexion.gettiempoDia().get(dia).getWeather().equals("Nieve")) {conexionCiudad.setIcon(new ImageIcon("nieve.png"));}
 		conexion.gettiempoDia().clear();
 	}
 	@SuppressWarnings("static-access")
 	public void informacion(FicheroProperties ciudad, JLabel dibujo, int dia) {
 		if(ciudad.gettiempoDia().get(dia).getWeather().equals("Soleado")) {dibujo.setIcon(new ImageIcon("sol.png"));}
-		if(ciudad.gettiempoDia().get(dia).getWeather().equals("Parcialmente nuboso")) {dibujo.setIcon(new ImageIcon("parciamente.png"));}
+		if(ciudad.gettiempoDia().get(dia).getWeather().equals("Parcialmente nuboso")||ciudad.gettiempoDia().get(dia).getWeather().equals("Intervalos de sol")) {dibujo.setIcon(new ImageIcon("parciamente.png"));}
 		if(ciudad.gettiempoDia().get(dia).getWeather().equals("Lluvia")) {dibujo.setIcon(new ImageIcon("tormenta.ong.png"));}
 		if(ciudad.gettiempoDia().get(dia).getWeather().equals("Muy nuboso")||ciudad.gettiempoDia().get(dia).getWeather().equals("Cubierto")) {dibujo.setIcon(new ImageIcon("muynuboso.png"));}
 		if(ciudad.gettiempoDia().get(dia).getWeather().equals("Lluvia débil")) {dibujo.setIcon(new ImageIcon("debil.png"));}
 		if(ciudad.gettiempoDia().get(dia).getWeather().equals("Chubascos dispersos")) {dibujo.setIcon(new ImageIcon("chubascos.png"));}
+		if(ciudad.gettiempoDia().get(dia).getWeather().equals("Nieve")) {dibujo.setIcon(new ImageIcon("nieve.png"));}
 	}
 }
